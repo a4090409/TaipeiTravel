@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A6B1841D1E34D1EBABA8A01 /* Pods_TaipeiTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */; };
+		AC64F15B1E4B1773008CCFD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */; };
+		AC64F15D1E4B1773008CCFD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F15C1E4B1773008CCFD4 /* ViewController.swift */; };
+		AC64F1601E4B1773008CCFD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64F15E1E4B1773008CCFD4 /* Main.storyboard */; };
+		AC64F1631E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */; };
+		AC64F1651E4B1773008CCFD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC64F1641E4B1773008CCFD4 /* Assets.xcassets */; };
+		AC64F1681E4B1773008CCFD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64F1661E4B1773008CCFD4 /* LaunchScreen.storyboard */; };
+		AC64F1701E4DBBEA008CCFD4 /* TravalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */; };
+		AC64F1741E504B22008CCFD4 /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */; };
+		AC64F1761E504CFE008CCFD4 /* TravelDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07EE0D8B935F5BCAF56D47B5 /* Pods-TaipeiTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiTravel.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiTravel/Pods-TaipeiTravel.release.xcconfig"; sourceTree = "<group>"; };
+		33088D9B3EF9D553C7666517 /* Pods-TaipeiTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiTravel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiTravel/Pods-TaipeiTravel.debug.xcconfig"; sourceTree = "<group>"; };
+		AC64F1571E4B1773008CCFD4 /* TaipeiTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaipeiTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC64F15C1E4B1773008CCFD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC64F15F1E4B1773008CCFD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC64F1621E4B1773008CCFD4 /* TaipeiTravel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaipeiTravel.xcdatamodel; sourceTree = "<group>"; };
+		AC64F1641E4B1773008CCFD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC64F1671E4B1773008CCFD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC64F1691E4B1773008CCFD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravalInfo.swift; sourceTree = "<group>"; };
+		AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDetailViewController.swift; sourceTree = "<group>"; };
+		AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC64F1541E4B1773008CCFD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6B1841D1E34D1EBABA8A01 /* Pods_TaipeiTravel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EA30B2E38675A7D1CE47DCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC64F14E1E4B1773008CCFD4 = {
+			isa = PBXGroup;
+			children = (
+				AC64F1591E4B1773008CCFD4 /* TaipeiTravel */,
+				AC64F1581E4B1773008CCFD4 /* Products */,
+				C01A425DF401E66249F41919 /* Pods */,
+				2EA30B2E38675A7D1CE47DCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC64F1581E4B1773008CCFD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC64F1571E4B1773008CCFD4 /* TaipeiTravel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC64F1591E4B1773008CCFD4 /* TaipeiTravel */ = {
+			isa = PBXGroup;
+			children = (
+				AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */,
+				AC64F15C1E4B1773008CCFD4 /* ViewController.swift */,
+				AC64F15E1E4B1773008CCFD4 /* Main.storyboard */,
+				AC64F1641E4B1773008CCFD4 /* Assets.xcassets */,
+				AC64F1661E4B1773008CCFD4 /* LaunchScreen.storyboard */,
+				AC64F1691E4B1773008CCFD4 /* Info.plist */,
+				AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */,
+				AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */,
+				AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */,
+				AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */,
+			);
+			path = TaipeiTravel;
+			sourceTree = "<group>";
+		};
+		C01A425DF401E66249F41919 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33088D9B3EF9D553C7666517 /* Pods-TaipeiTravel.debug.xcconfig */,
+				07EE0D8B935F5BCAF56D47B5 /* Pods-TaipeiTravel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC64F1561E4B1773008CCFD4 /* TaipeiTravel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC64F16C1E4B1773008CCFD4 /* Build configuration list for PBXNativeTarget "TaipeiTravel" */;
+			buildPhases = (
+				62C85FE3CE6983F4CED6C1C8 /* [CP] Check Pods Manifest.lock */,
+				AC64F1531E4B1773008CCFD4 /* Sources */,
+				AC64F1541E4B1773008CCFD4 /* Frameworks */,
+				AC64F1551E4B1773008CCFD4 /* Resources */,
+				296913CE9239BA9DC757725C /* [CP] Embed Pods Frameworks */,
+				C9F0AF36C0B91E09F7B7365A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaipeiTravel;
+			productName = TaipeiTravel;
+			productReference = AC64F1571E4B1773008CCFD4 /* TaipeiTravel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC64F14F1E4B1773008CCFD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ChinBuck;
+				TargetAttributes = {
+					AC64F1561E4B1773008CCFD4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5Y4VT4P226;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AC64F1521E4B1773008CCFD4 /* Build configuration list for PBXProject "TaipeiTravel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC64F14E1E4B1773008CCFD4;
+			productRefGroup = AC64F1581E4B1773008CCFD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC64F1561E4B1773008CCFD4 /* TaipeiTravel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC64F1551E4B1773008CCFD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC64F1681E4B1773008CCFD4 /* LaunchScreen.storyboard in Resources */,
+				AC64F1651E4B1773008CCFD4 /* Assets.xcassets in Resources */,
+				AC64F1601E4B1773008CCFD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		296913CE9239BA9DC757725C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaipeiTravel/Pods-TaipeiTravel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C85FE3CE6983F4CED6C1C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9F0AF36C0B91E09F7B7365A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaipeiTravel/Pods-TaipeiTravel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC64F1531E4B1773008CCFD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC64F15D1E4B1773008CCFD4 /* ViewController.swift in Sources */,
+				AC64F1701E4DBBEA008CCFD4 /* TravalInfo.swift in Sources */,
+				AC64F1741E504B22008CCFD4 /* TravelDetailViewController.swift in Sources */,
+				AC64F1631E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld in Sources */,
+				AC64F1761E504CFE008CCFD4 /* TravelDetailTableViewCell.swift in Sources */,
+				AC64F15B1E4B1773008CCFD4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC64F15E1E4B1773008CCFD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC64F15F1E4B1773008CCFD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC64F1661E4B1773008CCFD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC64F1671E4B1773008CCFD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC64F16A1E4B1773008CCFD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC64F16B1E4B1773008CCFD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC64F16D1E4B1773008CCFD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33088D9B3EF9D553C7666517 /* Pods-TaipeiTravel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5Y4VT4P226;
+				INFOPLIST_FILE = TaipeiTravel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = First.Hello.TaipeiTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AC64F16E1E4B1773008CCFD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07EE0D8B935F5BCAF56D47B5 /* Pods-TaipeiTravel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5Y4VT4P226;
+				INFOPLIST_FILE = TaipeiTravel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = First.Hello.TaipeiTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC64F1521E4B1773008CCFD4 /* Build configuration list for PBXProject "TaipeiTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC64F16A1E4B1773008CCFD4 /* Debug */,
+				AC64F16B1E4B1773008CCFD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC64F16C1E4B1773008CCFD4 /* Build configuration list for PBXNativeTarget "TaipeiTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC64F16D1E4B1773008CCFD4 /* Debug */,
+				AC64F16E1E4B1773008CCFD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC64F1621E4B1773008CCFD4 /* TaipeiTravel.xcdatamodel */,
+			);
+			currentVersion = AC64F1621E4B1773008CCFD4 /* TaipeiTravel.xcdatamodel */;
+			path = TaipeiTravel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC64F14F1E4B1773008CCFD4 /* Project object */;
+}
