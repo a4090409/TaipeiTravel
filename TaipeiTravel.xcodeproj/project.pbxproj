@@ -87,7 +87,6 @@
 		AC64F1591E4B1773008CCFD4 /* TaipeiTravel */ = {
 			isa = PBXGroup;
 			children = (
-				AC1BA4631E5BECAD00DCEEF4 /* ShowDetailViewController.swift */,
 				AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */,
 				AC64F15C1E4B1773008CCFD4 /* ViewController.swift */,
 				AC64F15E1E4B1773008CCFD4 /* Main.storyboard */,
@@ -95,13 +94,14 @@
 				AC64F1661E4B1773008CCFD4 /* LaunchScreen.storyboard */,
 				AC64F1691E4B1773008CCFD4 /* Info.plist */,
 				AC88C48A1E5BEA04003CAFD0 /* GoogleService-Info.plist */,
-				AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */,
+				ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */,
+				AC1BA4631E5BECAD00DCEEF4 /* ShowDetailViewController.swift */,
 				AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */,
 				AC88C4841E5BE9E3003CAFD0 /* MapViewController.swift */,
 				AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */,
 				AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */,
 				AC1BA4651E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift */,
-				ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */,
+				AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */,
 			);
 			path = TaipeiTravel;
 			sourceTree = "<group>";

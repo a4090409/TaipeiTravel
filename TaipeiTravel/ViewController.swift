@@ -13,7 +13,6 @@ import Firebase
 import FirebaseDatabase
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
-
     
     var urlString:String!
     var dataArray = [AnyObject]()
@@ -76,19 +75,19 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
                     if (self.nowday! != NowDate as! String)
                     {
                         //先清除使用過的推薦景點
-                      self.ref.child(self.uuid!).child("usedNum").setValue([])
-                        self.AlamofireStar(SetTravalInfo: true)
+                    self.ref.child(self.uuid!).child("usedNum").setValue([])
+                        self.alamofireStar(SetTravalInfo: true)
 
                     }
                     //使用已更新過內容設定travaInfo
                     else
                     {
-                        self.AlamofireStar(SetTravalInfo: false)
+                        self.alamofireStar(SetTravalInfo: false)
                         self.usedNum = snapshot.childSnapshot(forPath: "\(self.uuid!)/usedNum").value as! [UInt32]
                         //self.AlamofireStar()
 
                         //print("now = (SetTravalInfoBysnapshot)")
-                        self.SetTravalInfoBysnapshot(Snapshot: snapshot)
+                        self.setTravalInfoBysnapshot(Snapshot: snapshot)
                     }
                 }
             }
@@ -96,7 +95,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
             {
                 //print("now = (AlamofireStar)")
                 //開始讀取api資料
-                self.AlamofireStar(SetTravalInfo: true)
+                self.alamofireStar(SetTravalInfo: true)
                                //資料下載完成後
             }
             /*for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
@@ -116,7 +115,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
     
     //Api回傳設定值
-    func SetTravalInfo(Json dataArrayTaipei:[JSON] )
+    func setTravalInfo(Json dataArrayTaipei:[JSON] )
     {
         self.travelInfo.stitle  = dataArrayTaipei[Int(self.randomNum)]["stitle"].stringValue
         self.travelInfo.cate  = dataArrayTaipei[Int(self.randomNum)]["CAT2"].stringValue
@@ -128,7 +127,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         self.travelInfo.trafficinfo  = dataArrayTaipei[Int(self.randomNum)]["info"].stringValue
     }
     
-    func SetTravalInfoBysnapshot(Snapshot snapshot:FIRDataSnapshot)
+    func setTravalInfoBysnapshot(Snapshot snapshot:FIRDataSnapshot)
     {
         self.travelInfo.stitle = snapshot.childSnapshot(forPath: "\(self.uuid!)/stitle").value as! String
         self.travelInfo.cate = snapshot.childSnapshot(forPath: "\(self.uuid!)/cate").value as! String
@@ -140,7 +139,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         self.travelInfo.trafficinfo = snapshot.childSnapshot(forPath: "\(self.uuid!)/trafficinfo").value as! String
         self.ref.child(self.uuid!).child("nowday").setValue(self.nowday)
     }
-    func  UpdateFireBase()
+    func  updateFireBase()
     {
         self.ref.child(self.uuid!).child("stitle").setValue(self.travelInfo.stitle)
         self.ref.child(self.uuid!).child("cate").setValue(self.travelInfo.cate)
@@ -155,11 +154,11 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
        
     }
     
-    func  ShowTravelInfo()
+    func  showTravelInfo()
     {
         self.performSegue(withIdentifier: "ShowTravelInfo", sender: self)
     }
-    func ResetTravalInfo()
+    func resetTravalInfo()
     {
         repeat
         {
@@ -171,8 +170,8 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         
         self.imgsArr = self.dataArrayTaipei[Int(self.randomNum)]["file"].stringValue.components(separatedBy: "http://")
         
-        SetTravalInfo(Json:  self.dataArrayTaipei)
-        UpdateFireBase()
+        setTravalInfo(Json:  self.dataArrayTaipei)
+        updateFireBase()
         
         self.performSegue(withIdentifier: "ShowTravelInfo", sender: self)
     }
@@ -193,11 +192,12 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         }
     }
     
+    //動畫實體
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return customPresentAnimationController
     }
 
-    func AlamofireStar(SetTravalInfo settravalInfo:Bool)
+    func alamofireStar(SetTravalInfo settravalInfo:Bool)
     {
         Alamofire.request(self.urlString, headers: nil).responseJSON(completionHandler: {response in
             if let sSON = response.result.value
@@ -233,9 +233,9 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
                 //}
                 
                 if(settravalInfo){
-                self.SetTravalInfo(Json: self.dataArrayTaipei)
+                self.setTravalInfo(Json: self.dataArrayTaipei)
                 
-                self.UpdateFireBase()
+                self.updateFireBase()
                 }
 
                 
@@ -248,7 +248,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
                         button.setTitle("今日推薦景點", for: .normal)
                         button.translatesAutoresizingMaskIntoConstraints = false
                         button.setTitleColor(.white, for: .normal)
-                        button.addTarget(self, action:#selector(self.ShowTravelInfo), for: .touchUpInside)
+                        button.addTarget(self, action:#selector(self.showTravelInfo), for: .touchUpInside)
                         button.layer.cornerRadius = 15.0
                         return button
                 }()
@@ -260,7 +260,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
                         button.setTitle("重新推薦景點！！", for: .normal)
                         button.translatesAutoresizingMaskIntoConstraints = false
                         button.setTitleColor(.white, for: .normal)
-                        button.addTarget(self, action:#selector(self.ResetTravalInfo), for: .touchUpInside)
+                        button.addTarget(self, action:#selector(self.resetTravalInfo), for: .touchUpInside)
                         button.layer.cornerRadius = 15.0
                         return button
                 }()
