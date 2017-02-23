@@ -8,20 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		6A6B1841D1E34D1EBABA8A01 /* Pods_TaipeiTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */; };
+		AC1BA4641E5BECAD00DCEEF4 /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA4631E5BECAD00DCEEF4 /* ShowDetailViewController.swift */; };
+		AC1BA4661E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA4651E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift */; };
 		AC64F15B1E4B1773008CCFD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */; };
 		AC64F15D1E4B1773008CCFD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F15C1E4B1773008CCFD4 /* ViewController.swift */; };
 		AC64F1601E4B1773008CCFD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64F15E1E4B1773008CCFD4 /* Main.storyboard */; };
 		AC64F1631E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */; };
-		AC64F1651E4B1773008CCFD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC64F1641E4B1773008CCFD4 /* Assets.xcassets */; };
 		AC64F1681E4B1773008CCFD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC64F1661E4B1773008CCFD4 /* LaunchScreen.storyboard */; };
 		AC64F1701E4DBBEA008CCFD4 /* TravalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */; };
 		AC64F1741E504B22008CCFD4 /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */; };
 		AC64F1761E504CFE008CCFD4 /* TravelDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */; };
+		AC769BD41E5D6571000F4874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC64F1641E4B1773008CCFD4 /* Assets.xcassets */; };
+		AC88C4851E5BE9E3003CAFD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88C4841E5BE9E3003CAFD0 /* MapViewController.swift */; };
+		AC88C48B1E5BEA04003CAFD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC88C48A1E5BEA04003CAFD0 /* GoogleService-Info.plist */; };
+		ACB38B531E5E90DC00572671 /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07EE0D8B935F5BCAF56D47B5 /* Pods-TaipeiTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiTravel.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiTravel/Pods-TaipeiTravel.release.xcconfig"; sourceTree = "<group>"; };
 		33088D9B3EF9D553C7666517 /* Pods-TaipeiTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiTravel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiTravel/Pods-TaipeiTravel.debug.xcconfig"; sourceTree = "<group>"; };
+		AC1BA4631E5BECAD00DCEEF4 /* ShowDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
+		AC1BA4651E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaipeiCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC64F1571E4B1773008CCFD4 /* TaipeiTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaipeiTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC64F15C1E4B1773008CCFD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +40,9 @@
 		AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravalInfo.swift; sourceTree = "<group>"; };
 		AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDetailViewController.swift; sourceTree = "<group>"; };
 		AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AC88C4841E5BE9E3003CAFD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = SOURCE_ROOT; };
+		AC88C48A1E5BEA04003CAFD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
 		C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,16 +87,21 @@
 		AC64F1591E4B1773008CCFD4 /* TaipeiTravel */ = {
 			isa = PBXGroup;
 			children = (
+				AC1BA4631E5BECAD00DCEEF4 /* ShowDetailViewController.swift */,
 				AC64F15A1E4B1773008CCFD4 /* AppDelegate.swift */,
 				AC64F15C1E4B1773008CCFD4 /* ViewController.swift */,
 				AC64F15E1E4B1773008CCFD4 /* Main.storyboard */,
 				AC64F1641E4B1773008CCFD4 /* Assets.xcassets */,
 				AC64F1661E4B1773008CCFD4 /* LaunchScreen.storyboard */,
 				AC64F1691E4B1773008CCFD4 /* Info.plist */,
+				AC88C48A1E5BEA04003CAFD0 /* GoogleService-Info.plist */,
 				AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */,
 				AC64F16F1E4DBBEA008CCFD4 /* TravalInfo.swift */,
+				AC88C4841E5BE9E3003CAFD0 /* MapViewController.swift */,
 				AC64F1731E504B22008CCFD4 /* TravelDetailViewController.swift */,
 				AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */,
+				AC1BA4651E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift */,
+				ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */,
 			);
 			path = TaipeiTravel;
 			sourceTree = "<group>";
@@ -164,7 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC64F1681E4B1773008CCFD4 /* LaunchScreen.storyboard in Resources */,
-				AC64F1651E4B1773008CCFD4 /* Assets.xcassets in Resources */,
+				AC88C48B1E5BEA04003CAFD0 /* GoogleService-Info.plist in Resources */,
+				AC769BD41E5D6571000F4874 /* Assets.xcassets in Resources */,
 				AC64F1601E4B1773008CCFD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +246,10 @@
 				AC64F1631E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld in Sources */,
 				AC64F1761E504CFE008CCFD4 /* TravelDetailTableViewCell.swift in Sources */,
 				AC64F15B1E4B1773008CCFD4 /* AppDelegate.swift in Sources */,
+				AC1BA4641E5BECAD00DCEEF4 /* ShowDetailViewController.swift in Sources */,
+				ACB38B531E5E90DC00572671 /* CustomPresentAnimationController.swift in Sources */,
+				AC1BA4661E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift in Sources */,
+				AC88C4851E5BE9E3003CAFD0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
