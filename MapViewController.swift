@@ -20,7 +20,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     //var restaurant:Restaurant!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
         //print(travelInfo.address)
@@ -58,7 +58,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.showsTraffic = true
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,15 +89,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

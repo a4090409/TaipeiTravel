@@ -22,6 +22,10 @@
 		AC88C4851E5BE9E3003CAFD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC88C4841E5BE9E3003CAFD0 /* MapViewController.swift */; };
 		AC88C48B1E5BEA04003CAFD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC88C48A1E5BEA04003CAFD0 /* GoogleService-Info.plist */; };
 		ACB38B531E5E90DC00572671 /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */; };
+		ACB38B551E5FD6D100572671 /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B541E5FD6D100572671 /* CustomNavigationAnimationController.swift */; };
+		ACB38B591E5FE43A00572671 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B581E5FE43A00572671 /* TestViewController.swift */; };
+		ACB38B5F1E67F16F00572671 /* ＷalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B5E1E67F16F00572671 /* ＷalkthroughViewController.swift */; };
+		ACB38B611E67F52000572671 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B601E67F52000572671 /* WalkthroughPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		AC88C4841E5BE9E3003CAFD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = SOURCE_ROOT; };
 		AC88C48A1E5BEA04003CAFD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ACB38B521E5E90DC00572671 /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
+		ACB38B541E5FD6D100572671 /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
+		ACB38B581E5FE43A00572671 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		ACB38B5E1E67F16F00572671 /* ＷalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ＷalkthroughViewController.swift"; sourceTree = "<group>"; };
+		ACB38B601E67F52000572671 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +110,10 @@
 				AC64F1751E504CFE008CCFD4 /* TravelDetailTableViewCell.swift */,
 				AC1BA4651E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift */,
 				AC64F1611E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld */,
+				ACB38B541E5FD6D100572671 /* CustomNavigationAnimationController.swift */,
+				ACB38B581E5FE43A00572671 /* TestViewController.swift */,
+				ACB38B5E1E67F16F00572671 /* ＷalkthroughViewController.swift */,
+				ACB38B601E67F52000572671 /* WalkthroughPageViewController.swift */,
 			);
 			path = TaipeiTravel;
 			sourceTree = "<group>";
@@ -240,16 +252,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB38B5F1E67F16F00572671 /* ＷalkthroughViewController.swift in Sources */,
 				AC64F15D1E4B1773008CCFD4 /* ViewController.swift in Sources */,
 				AC64F1701E4DBBEA008CCFD4 /* TravalInfo.swift in Sources */,
 				AC64F1741E504B22008CCFD4 /* TravelDetailViewController.swift in Sources */,
 				AC64F1631E4B1773008CCFD4 /* TaipeiTravel.xcdatamodeld in Sources */,
 				AC64F1761E504CFE008CCFD4 /* TravelDetailTableViewCell.swift in Sources */,
+				ACB38B611E67F52000572671 /* WalkthroughPageViewController.swift in Sources */,
 				AC64F15B1E4B1773008CCFD4 /* AppDelegate.swift in Sources */,
 				AC1BA4641E5BECAD00DCEEF4 /* ShowDetailViewController.swift in Sources */,
 				ACB38B531E5E90DC00572671 /* CustomPresentAnimationController.swift in Sources */,
 				AC1BA4661E5BF0D000DCEEF4 /* TaipeiCollectionViewCell.swift in Sources */,
 				AC88C4851E5BE9E3003CAFD0 /* MapViewController.swift in Sources */,
+				ACB38B591E5FE43A00572671 /* TestViewController.swift in Sources */,
+				ACB38B551E5FD6D100572671 /* CustomNavigationAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

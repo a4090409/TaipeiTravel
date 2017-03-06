@@ -11,24 +11,23 @@ import SDWebImage
 
 
 class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource ,UICollectionViewDelegate,UICollectionViewDataSource{
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet var TravelImage:UIImageView!
     var travelinfo:TravalInfo!
     @IBOutlet var tableview:UITableView!
+   
     var busy:UIActivityIndicatorView!
     
     var myScrollView:UIScrollView!
-    var myPageControl:UIPageControl!
     var fullSize:CGSize!
-    
     var fullScreenSize :CGSize!
     var arrData = [String]()
     var image1:UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         //資料
         for i in 1..<travelinfo.imgfile.count {
             arrData.append("\(i)")
@@ -43,17 +42,17 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
         // 設置委任對象
         collectionView.delegate = self
         collectionView.dataSource = self
-    
+        
         tableview.estimatedRowHeight = 50.0
         tableview.rowHeight = UITableViewAutomaticDimension
         
         title = travelinfo.stitle
-
-                // Do any additional setup after loading the view.
+        
+        // Do any additional setup after loading the view.
     }
     
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,6 +68,9 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
                     as! TaipeiCollectionViewCell
             
             cell.imageView.sd_setImage(with: URL(string: "https://" + travelinfo.imgfile[indexPath.row+1]))
+            
+            cell.pgecon.numberOfPages = travelinfo.imgfile.count - 1
+            cell.pgecon.currentPage = indexPath.row
             return cell
     }
     
@@ -79,50 +81,50 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     
     
     override func viewWillAppear(_ animated: Bool){
         
-       
-       // self.TravelImage.sd_setImage(with: URL(string: "https://" + travelinfo.imgfile)!
+        
+        // self.TravelImage.sd_setImage(with: URL(string: "https://" + travelinfo.imgfile)!
         // )
         
         
-       //let catPicturneURL = URL(string:  "https://" + travelinfo.imgfile)!
-       /* let session = URLSession(configuration: .default)
-        
-        let downloadPicTask = session.dataTask(with: catPictureURL)
-        { (data, response, error) in
-            // 下載
-            if let e = error {
-                print("Error downloading  picture: \(e)")
-            }
-            else
-            {
-                if let res = response as? HTTPURLResponse
-                {
-                    print("Downloaded  picture with response code \(res.statusCode)")
-                    if let imageData = data
-                    {
-                       
-                        self.TravelImage.image = UIImage(data: imageData)
-                    }
-                    else
-                    {
-                        print("Image is nil")
-                    }
-                }
-                else
-                {
-                    print("Couldn't get response code")
-                }
-            }
-        }
-        downloadPicTask.resume()*/
+        //let catPicturneURL = URL(string:  "https://" + travelinfo.imgfile)!
+        /* let session = URLSession(configuration: .default)
+         
+         let downloadPicTask = session.dataTask(with: catPictureURL)
+         { (data, response, error) in
+         // 下載
+         if let e = error {
+         print("Error downloading  picture: \(e)")
+         }
+         else
+         {
+         if let res = response as? HTTPURLResponse
+         {
+         print("Downloaded  picture with response code \(res.statusCode)")
+         if let imageData = data
+         {
+         
+         self.TravelImage.image = UIImage(data: imageData)
+         }
+         else
+         {
+         print("Image is nil")
+         }
+         }
+         else
+         {
+         print("Couldn't get response code")
+         }
+         }
+         }
+         downloadPicTask.resume()*/
     }
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
@@ -147,7 +149,7 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
             cell.FieldLabel.text = "名稱"
             cell.ValueLabel.text = travelinfo.stitle
             cell.accessoryType = .disclosureIndicator
-
+            
         case 1:
             cell.FieldLabel.text = "類型"
             cell.ValueLabel.text = travelinfo.cate
@@ -155,7 +157,7 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
             cell.FieldLabel.text = "位置"
             cell.ValueLabel.text = travelinfo.address
             cell.accessoryType = .disclosureIndicator
-
+            
         case 3:
             cell.FieldLabel.text = "MRT"
             
@@ -167,10 +169,10 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
             {
                 cell.ValueLabel.text = travelinfo.MRT
             }
-        //case 4:
-          //  cell.FieldLabel.text = "介紹"
+            //case 4:
+            //  cell.FieldLabel.text = "介紹"
             //cell.ValueLabel.text = travelinfo.xbody
-            //cell.accessoryType = .disclosureIndicator
+        //cell.accessoryType = .disclosureIndicator
         case 4:
             cell.FieldLabel.text = "營業時間"
             cell.ValueLabel.text = travelinfo.MEMO_TIME
@@ -193,19 +195,19 @@ class TravelDetailViewController: UIViewController,UITableViewDelegate,UITableVi
             let defaultText = "現在就去這裡"
             
             SDWebImageManager().downloadImage(with: URL(string: "https://" + self.travelinfo.imgfile[1]), options:SDWebImageOptions.avoidAutoSetImage, progress: nil
-              , completed: { (image, error, sd, bool, url) in
-                if image != nil {
-                    self.image1 = image
-                    
-                }
+                , completed: { (image, error, sd, bool, url) in
+                    if image != nil {
+                        self.image1 = image
+                        
+                    }
             })
             let activecontroller = UIActivityViewController(activityItems: [defaultText,self.image1], applicationActivities: nil)
             self.present(activecontroller, animated: true, completion: nil)
-        
+            
         })
         return [Shareaction]
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowMap"
