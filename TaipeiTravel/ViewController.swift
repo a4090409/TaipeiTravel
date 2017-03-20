@@ -12,6 +12,7 @@ import SwiftyJSON
 import Firebase
 import FirebaseDatabase
 
+
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UINavigationControllerDelegate {
     
     
@@ -34,7 +35,6 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
     let customNavigationAnimationController = CustomNavigationAnimationController()
     
     override func viewDidLoad() {
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         //初始化物件
@@ -259,6 +259,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
                     button.setTitleColor(.white, for: .normal)
                     button.addTarget(self, action:#selector(self.showTravelInfo), for: .touchUpInside)
                     button.layer.cornerRadius = 15.0
+                    button.titleLabel?.adjustsFontSizeToFitWidth = true
                     return button
             }()
             let AgainButton:UIButton =
@@ -271,6 +272,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
                     button.setTitleColor(.white, for: .normal)
                     button.addTarget(self, action:#selector(self.resetTravalInfo), for: .touchUpInside)
                     button.layer.cornerRadius = 15.0
+                    button.titleLabel?.adjustsFontSizeToFitWidth = true
                     return button
             }()
             
@@ -356,7 +358,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
     //使用alamofire呼叫api並設定資訊
     func alamofireStar(SetTravalInfo settravalInfo:Bool)
     {
-        Alamofire.request(self.urlString, headers: nil).responseJSON(completionHandler: {
+            Alamofire.request(self.urlString, headers: nil).responseJSON(completionHandler: {
             response in
             if let sSON = response.result.value
             {
@@ -397,6 +399,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
                         button.setTitleColor(.white, for: .normal)
                         button.addTarget(self, action:#selector(self.showTravelInfo), for: .touchUpInside)
                         button.layer.cornerRadius = 15.0
+                        button.titleLabel?.adjustsFontSizeToFitWidth = true
                         return button
                 }()
                 let AgainButton:UIButton =
@@ -409,6 +412,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
                         button.setTitleColor(.white, for: .normal)
                         button.addTarget(self, action:#selector(self.resetTravalInfo), for: .touchUpInside)
                         button.layer.cornerRadius = 15.0
+                        button.titleLabel?.adjustsFontSizeToFitWidth = true
                         return button
                 }()
                 
@@ -510,7 +514,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate,UIN
         }
         viewsum += 1
         defaults.set(viewsum, forKey: "viewsum")
-
+        
         
         
     }

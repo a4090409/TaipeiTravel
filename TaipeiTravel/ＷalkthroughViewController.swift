@@ -25,6 +25,9 @@ class WalkthroughViewController: UIViewController {
         heafLabel.text = heading
         footLabel.text = content
         imageView.image =  UIImage(named: imageFile)
+        heafLabel.numberOfLines = 1;
+        heafLabel.adjustsFontForContentSizeCategory = true
+
         footLabel.numberOfLines = 1;
         footLabel.adjustsFontForContentSizeCategory = true
         pageControl.currentPage = index
@@ -43,6 +46,7 @@ class WalkthroughViewController: UIViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         switch index {
         case 0...4:
+            // parent = pagecontroller
             let pageViewController = parent as! WalkthroughPageViewController
             pageViewController.forward(index: index)
             
@@ -51,6 +55,7 @@ class WalkthroughViewController: UIViewController {
             defaults.set(true, forKey: "hasViewd")
             dismiss(animated: true, completion: nil)
         default:
+            print("nextButton2")
             break
         }
     }

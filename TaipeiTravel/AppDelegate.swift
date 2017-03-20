@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         UINavigationBar.appearance().tintColor = UIColor.white
@@ -31,6 +31,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         
         FIRApp.configure()
+        //印出錯誤事件
+        NSSetUncaughtExceptionHandler { (exception) in
+            let arr:NSArray = exception.callStackSymbols as NSArray
+            let reason:String = exception.reason!
+            let name:String = exception.name.rawValue
+            let date:NSDate = NSDate()
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateFormat = "YYYY/MM/dd hh:mm:ss SS"
+            let strNowTime = timeFormatter.string(from: date as Date) as String
+            let url:String = String.init(format: "========異常錯誤報告========\ntime:%@\nname:%@\nreason:\n%@\ncallStackSymbols:\n%@",strNowTime,name,reason,arr.componentsJoined(by: "\n"))
+            print("\(url)")
+            
+            //            let documentpath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!
+            //            let path = documentpath.appending("Exception.txt")
+            //            do{
+            //                try
+            //                    url.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+            //            }catch{}
+            
+        }
         return true
     }
     

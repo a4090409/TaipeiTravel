@@ -21,6 +21,7 @@ class WalkthroughPageViewController: UIPageViewController,UIPageViewControllerDa
         
         if let startingViewController = viewControllAtIndex(index: 0)
         {
+            //起始頁
             setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
         }
         // Do any additional setup after loading the view.
@@ -64,6 +65,7 @@ class WalkthroughPageViewController: UIPageViewController,UIPageViewControllerDa
     }
     func forward(index:Int)
     {
+        print("forward")
         if let nextViewController = viewControllAtIndex(index:index+1)
         {
             setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)

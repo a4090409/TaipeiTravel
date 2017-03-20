@@ -26,6 +26,7 @@
 		ACB38B591E5FE43A00572671 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B581E5FE43A00572671 /* TestViewController.swift */; };
 		ACB38B5F1E67F16F00572671 /* ＷalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B5E1E67F16F00572671 /* ＷalkthroughViewController.swift */; };
 		ACB38B611E67F52000572671 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB38B601E67F52000572671 /* WalkthroughPageViewController.swift */; };
+		ACB38B881E713A3A00572671 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB38B871E713A3A00572671 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		ACB38B581E5FE43A00572671 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		ACB38B5E1E67F16F00572671 /* ＷalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ＷalkthroughViewController.swift"; sourceTree = "<group>"; };
 		ACB38B601E67F52000572671 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		ACB38B871E713A3A00572671 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaipeiTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB38B881E713A3A00572671 /* MapKit.framework in Frameworks */,
 				6A6B1841D1E34D1EBABA8A01 /* Pods_TaipeiTravel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +72,7 @@
 		2EA30B2E38675A7D1CE47DCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACB38B871E713A3A00572671 /* MapKit.framework */,
 				C16ADE83B64CF86A774B05C2 /* Pods_TaipeiTravel.framework */,
 			);
 			name = Frameworks;
@@ -157,13 +161,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ChinBuck;
 				TargetAttributes = {
 					AC64F1561E4B1773008CCFD4 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5Y4VT4P226;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -309,6 +318,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -359,6 +369,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -388,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33088D9B3EF9D553C7666517 /* Pods-TaipeiTravel.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5Y4VT4P226;
 				INFOPLIST_FILE = TaipeiTravel/Info.plist;
@@ -402,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07EE0D8B935F5BCAF56D47B5 /* Pods-TaipeiTravel.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5Y4VT4P226;
 				INFOPLIST_FILE = TaipeiTravel/Info.plist;

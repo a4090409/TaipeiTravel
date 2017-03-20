@@ -36,8 +36,8 @@ class CustomNavigationAnimationController: NSObject, UIViewControllerAnimatedTra
         //(0,0.5) 中心最右
         fromView?.layer.anchorPoint = CGPoint(x: direction == 1 ? 1 : 0, y: 0.5)
         //(M_PI_2 = 90度 = 1.57xxxx)
-        var viewFromTransform: CATransform3D = CATransform3DMakeRotation(direction * CGFloat(M_PI_2), 0.0, 1.0, 0.0)
-        var viewToTransform: CATransform3D = CATransform3DMakeRotation(-direction * CGFloat(M_PI_2), 0.0, 1.0, 0.0)
+        var viewFromTransform: CATransform3D = CATransform3DMakeRotation(direction * CGFloat(M_PI), 0.0, 1.0, 0.0)
+        var viewToTransform: CATransform3D = CATransform3DMakeRotation(-direction * CGFloat(M_PI), 0.0, 1.0, 0.0)
         viewFromTransform.m34 = const
         viewToTransform.m34 = const
         
