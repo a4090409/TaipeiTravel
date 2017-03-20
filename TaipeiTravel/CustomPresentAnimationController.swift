@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomPresentAnimationController: NSObject,UIViewControllerAnimatedTransitioning {
-
+    
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval
     {
         return 2.5
@@ -22,7 +22,7 @@ class CustomPresentAnimationController: NSObject,UIViewControllerAnimatedTransit
         let finalframFovc = transitionContext.finalFrame(for: toViewcontroller!)
         let containView = transitionContext.containerView
         let bound = UIScreen.main.bounds
-        //移動到螢幕下方
+        //移動到螢幕下方 toview 起始位置
         toViewcontroller?.view.frame = finalframFovc.offsetBy(dx: 0, dy: bound.size.height)
         containView.addSubview((toViewcontroller?.view)!)
         
@@ -36,5 +36,5 @@ class CustomPresentAnimationController: NSObject,UIViewControllerAnimatedTransit
             
         })
     }
- 
+    
 }

@@ -11,4 +11,5 @@ import UIKit
 class TaipeiCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView:UIImageView!
 
+    @IBOutlet weak var pgecon: UIPageControl!
 }
